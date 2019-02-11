@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="progname">
+        Scraper <br>
+        Welcome to a Meduza webscraper!
+    </div>
+</header>
+<div class = 'container'>
+    <div class = 'navbar'>
+        <div class = 'navbar__element navbar__element_active' id = 'navbar_articles'>
+            Articles
+        </div>
+        <div class = 'navbar__element' id = 'navbar_saved'>
+          Saved articles
+        </div>
+    </div>
+    <section id = 'scrapedArticles'>
+        <div id = 'scrapeNewWrapper'>
+            <button id = 'scrapeNew'>
+                Scrape new articles!
+             </button>
+             <div id="loader"><img  id ='loadergif' src="assets/images/loader.svg"></div>
+        </div>
+        <div id = 'articles'></div>
+    </section>
+    <section id = 'savedArticles'>
+        <div id = 'youHaveNoArticles' class = 'emptyBox'>Oops! You have no saved articles</div>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="closeModal">&times;</span>
+          <div class = 'modalContent'>
+              <div id = 'modalContent__up'>
+                  <div class= 'modalContent__header'>Notes</div>
+                  <div id ='modalContent__noteId'></div>
+              </div>
+              <div id ='modalContent__bottom'>
+                <div id = 'modalContent_browse'>
+                    <div id = 'modalContent__notes_browse'>
+                        <div id = 'modalContent__defaultNote'>You have no notes :(</div>
+                    </div>
+                    <div id = 'modalContent__addNote_browse'>
+                        <div class = 'modalContent__button' id = 'modalContent__button_addNote'>Add note</div>
+                    </div>
+                </div>
+                <div id = 'modalContent_edit'>
+                    <div id = 'modalContent__notes_edit'>
+                        <textarea name="modalContent__addNote" id="modalContent__addNote"" cols="30" rows="10" autofocus placeholder ='Type your note'></textarea>
+                    </div>
+                    <div id = 'modalContent__addNote_edit'>
+                        <div class = 'modalContent__button' id = 'modalContent__button_saveNote'>save</div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src = './index.js'></script>
+</html>
